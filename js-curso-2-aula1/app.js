@@ -1,14 +1,15 @@
 let listaDeNumeroSorteado = [];
-let numeroMax = 50;
+let numeroMax = 100;
 let numero = gerarNumero();
 let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let inicio = document.querySelector(tag);
     inicio.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2} );
 }
 function telaInicial() {
 exibirTextoNaTela('h1' ,'jogo do número secreto');
-exibirTextoNaTela('p','escolha um número de 0 a 50');
+exibirTextoNaTela('p','escolha um número de 0 a ' + numeroMax);
 }
 
 telaInicial();
